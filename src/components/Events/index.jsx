@@ -1,10 +1,9 @@
-import {useState} from 'react';
+import useEventsData from "../../hooks/useEventsData";
 import EventItem from "./components/EventItem";
-import eventsJSON from '../../data/events.json'
+
 
 const Events = ({searchValue}) => {
-    const [data] = useState(eventsJSON);
-    const {_embedded : {events}} = data;
+    const {events} = useEventsData();
     
     const renderEvents = () =>{
         let eventsFiltered = events;
