@@ -1,6 +1,7 @@
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import Navbar  from './components/Navbar'; 
 import Events from './components/Events'
+import SignupForm  from './components/SignupForm';
 import './App.css'
 
 
@@ -13,8 +14,9 @@ function App() {
 
   return (
     <>
-      <Navbar onSearch={handleNavbarSearch}/>
-      <Events searchValue={searchValue}/>
+      {/* <Navbar onSearch={handleNavbarSearch}/>
+      <Events searchValue={searchValue}/> */}
+      <SignupForm></SignupForm>
     </>
   )
 }
