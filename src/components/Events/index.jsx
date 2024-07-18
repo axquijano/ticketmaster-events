@@ -21,7 +21,7 @@ const Events = ({searchValue}) => {
     }
 
     if(isLoading){
-        return <div>Cargando resultados...</div>;
+        return <div>Cargando ...</div>;
     }
 
     if(error){

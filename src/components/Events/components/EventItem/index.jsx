@@ -1,9 +1,18 @@
-const EventItem = ({ info, name , image}) => {
+import styles from './EventItem.module.css';
+
+const EventItem = ({ info, name, image }) => {
+    const handleSeeMoreClick = (evt) => {
+
+    }
     return (
-        <div>
-           <img src={image} alt={name} width="300px"/>
-           <h4>{name}</h4>
-           <p>{info}</p>
+        <div className={styles.eventItemContainer}>
+            <img src={image} alt={name} width={200} height={200} />
+            <div className={styles.eventInfoContainer}>
+                <h4 className={styles.eventName}>{name}</h4>
+                <p className={styles.eventInfo}>{info}</p>
+                <button className={styles.seeMoreBtn} onClick={handleSeeMoreClick}>Ver mas</button>
+            </div>
+
         </div>
     );
 }
